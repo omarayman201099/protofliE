@@ -1,0 +1,70 @@
+<section class="projects-section">
+  <!-- العنوان -->
+  <div class="section-header">
+    <h2>Portfolio Showcase</h2>
+    <p>Explore my journey through projects, certifications, and technical expertise.</p>
+  </div>
+
+  <!-- التبويبات -->
+  <div class="tabs">
+    <button (click)="setActive('projects')" [class.active]="activeTab === 'projects'">
+      <i class="fa-solid fa-code"></i> Projects
+    </button>
+    <button (click)="setActive('certificates')" [class.active]="activeTab === 'certificates'">
+      <i class="fa-solid fa-certificate"></i> Certificates
+    </button>
+    <button (click)="setActive('tech')" [class.active]="activeTab === 'tech'">
+      <i class="fa-solid fa-gears"></i> Tech Stack
+    </button>
+  </div>
+
+  <!-- محتوى التبويبات -->
+  <div class="tab-content">
+    <!-- Projects -->
+    <div *ngIf="activeTab === 'projects'" class="cards-grid">
+      <article *ngFor="let project of projects; let i = index"
+               class="card animate-card"
+               [style.animationDelay]="i * 0.2 + 's'">
+
+        <!-- صورة -->
+        <div class="img-box">
+          <img [src]="project.image" [alt]="project.title" />
+          <div class="overlay"></div>
+        </div>
+
+        <!-- معلومات -->
+        <div class="card-body">
+          <div class="card-header">
+            <h3>{{ project.title }}</h3>
+            <a [href]="project.link" target="_blank" class="link-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <p>{{ project.description }}</p>
+
+          <div class="tags">
+            <span *ngFor="let tag of project.tags">• {{ tag }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Certificates -->
+    <div *ngIf="activeTab === 'certificates'" class="fade-in text-center">
+      <h3>📜 Certificates</h3>
+      <p>SOON....</p>
+    </div>
+
+    <!-- Tech Stack -->
+    <div *ngIf="activeTab === 'tech'" class="tech-grid ">
+      <div *ngFor="let tech of techStack; let i = index"
+           class="tech-card animate-card"
+           [style.animationDelay]="i * 0.15 + 's'">
+                 <span>{{ tech.name }}</span>
+        <img [src]="tech.icon" [alt]="tech.name" />
+
+      </div>
+    </div>
+  </div>
+</section>

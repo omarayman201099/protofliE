@@ -1,0 +1,55 @@
+.about {
+  border: 1px solid gray;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.about:hover {
+  background-color: #d1d5db;
+  color: black;
+}
+
+.soial-media {
+  font-size: 1.8rem;
+  color: gray;
+  transition: all 0.3s ease;
+  padding: 8px;
+}
+.soial-media:hover {
+  transform: scale(1.2) rotate(6deg);
+}
+
+/* ===============================
+   Animations
+   =============================== */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+.animate-delay-600 { animation-delay: 0.6s; }
+.animate-delay-700 { animation-delay: 0.7s; }
+.animate-delay-800 { animation-delay: 0.8s; }
+.animate-delay-900 { animation-delay: 0.9s; }
+
+/* Responsive polish */
+@media (max-width: 640px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero h2 {
+    font-size: 1.2rem;
+  }
+  #hero p {
+    font-size: 0.9rem;
+  }
+}

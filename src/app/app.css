@@ -1,0 +1,15 @@
+.app-wrapper {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+
+}
+
+
+*{
+  font-family: poppins, serif;
+}

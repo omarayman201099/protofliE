@@ -1,0 +1,127 @@
+/* container */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #1a0033, #2b004f);
+  background-size: 200% 200%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 9999;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* exit animation for whole splash (slide up + fade) */
+.splash-screen.screen-exit {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* icons wrapper */
+.icons {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 28px;
+}
+
+/* single icon initial state + animation */
+.icon {
+  width: 62px;
+  height: 62px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  color: white;
+  box-shadow: 0 0 0 rgba(168,85,247,0); /* animate to glow */
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  /* the animation that will run for each icon */
+  animation: iconIn 600ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* staggered delays: one-by-one entry */
+.icons .icon:nth-child(1) { animation-delay: 0.35s; }
+.icons .icon:nth-child(2) { animation-delay: 0.75s; }
+.icons .icon:nth-child(3) { animation-delay: 1.15s; }
+
+/* a small hover pop while still visible */
+.icon:hover {
+  transform: translateY(0) scale(1.12);
+  background: rgba(255,255,255,0.12);
+}
+
+/* icon keyframes: move up + scale + glow */
+@keyframes iconIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+    box-shadow: 0 0 0 rgba(168,85,247,0);
+  }
+  60% {
+    transform: translateY(-6px) scale(1.06);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    box-shadow: 0 12px 40px rgba(168,85,247,0.18);
+  }
+}
+
+/* Titles and link: use fadeIn but start after icons sequence */
+.title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 800ms ease forwards;
+}
+.title-line1 { animation-delay: 1.5s; } /* starts after icons */
+.title-line2 { animation-delay: 2.0s; }
+.site-link {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeIn 800ms ease forwards;
+  animation-delay: 2.6s;
+}
+
+/* highlight color for second line */
+.highlight { color: #a855f7;
+  font-size: 20px;
+  padding-bottom: 20px;
+
+}
+
+/* fadeIn keyframes used by titles/link */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* optional: when you later do zoom-out exit for icons, you can use a class */
+.zoom-out-exit {
+  animation: zoomOut 0.8s forwards;
+}
+@keyframes zoomOut {
+  to {
+    opacity: 0;
+    transform: scale(0.6) translateY(-10px);
+  }
+}
+
+
+.welocme {
+  font-size: 4rem;
+  margin-bottom: 0.6rem;
+  color: #d1d5db;
+}
+
+

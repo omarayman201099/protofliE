@@ -1,0 +1,103 @@
+<nav
+  class="fixed top-0 left-0 w-full z-50 transition-colors duration-500 animate-nav-slide"
+  [ngClass]="{
+    'bg-transparent text-white': !scrolled,
+    'bg-gray-900/95 text-white shadow-lg': scrolled
+  }"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-1 text-2xl font-extrabold p-[10%]">
+        <span
+          class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent gamal"
+        >
+          Omar
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex flex-1 justify-center space-x-10 font-medium p-[10%]">
+        <a
+          href="#hero"
+          class="relative group nav-link"
+          [ngClass]="{ 'text-purple-500': activeSection === 'hero' }"
+        >
+          Home
+          <span
+            class="absolute left-0 -bottom-1 h-0.5 bg-purple-500 transition-all duration-300"
+            [ngClass]="{
+              'w-full': activeSection === 'hero',
+              'w-0 group-hover:w-full': activeSection !== 'hero'
+            }"
+          ></span>
+        </a>
+
+        <a
+          href="#about"
+          class="relative group nav-link"
+          [ngClass]="{ 'text-purple-500': activeSection === 'about' }"
+        >
+          About
+          <span
+            class="absolute left-0 -bottom-1 h-0.5 bg-purple-500 transition-all duration-300"
+            [ngClass]="{
+              'w-full': activeSection === 'about',
+              'w-0 group-hover:w-full': activeSection !== 'about'
+            }"
+          ></span>
+        </a>
+
+        <a
+          href="#projects"
+          class="relative group nav-link"
+          [ngClass]="{ 'text-purple-500': activeSection === 'projects' }"
+        >
+          Projects
+          <span
+            class="absolute left-0 -bottom-1 h-0.5 bg-purple-500 transition-all duration-300"
+            [ngClass]="{
+              'w-full': activeSection === 'projects',
+              'w-0 group-hover:w-full': activeSection !== 'projects'
+            }"
+          ></span>
+        </a>
+
+
+      </div>
+
+      <!-- Burger Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button
+          (click)="toggleMenu()"
+          class="relative w-8 h-8 flex flex-col justify-between items-center focus:outline-none group hover:scale-110 transition"
+        >
+          <span
+            class="block h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+            [ngClass]="{ 'rotate-45 translate-y-2': isMenuOpen }"
+          ></span>
+          <span
+            class="block h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+            [ngClass]="{ 'opacity-0': isMenuOpen }"
+          ></span>
+          <span
+            class="block h-0.5 w-8 bg-current transform transition duration-500 ease-in-out"
+            [ngClass]="{ '-rotate-45 -translate-y-2': isMenuOpen }"
+          ></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    class="md:hidden bg-gray-900/95 text-white overflow-hidden transition-all duration-500 ease-in-out"
+    [ngClass]="{ 'max-h-0': !isMenuOpen, 'max-h-96': isMenuOpen }"
+  >
+    <div class="flex flex-col space-y-4 px-4 py-6">
+      <a href="#hero" class="mobile-link" [ngClass]="{ open: isMenuOpen }" (click)="toggleMenu()">Home</a>
+      <a href="#about" class="mobile-link" [ngClass]="{ open: isMenuOpen }" (click)="toggleMenu()">About</a>
+      <a href="#projects" class="mobile-link" [ngClass]="{ open: isMenuOpen }" (click)="toggleMenu()">Projects</a>
+    </div>
+  </div>
+</nav>

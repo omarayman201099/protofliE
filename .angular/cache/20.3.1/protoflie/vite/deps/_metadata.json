@@ -1,0 +1,76 @@
+{
+  "hash": "137a01c9",
+  "configHash": "183580ac",
+  "lockfileHash": "015d5530",
+  "browserHash": "31a3eb78",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "5cceed52",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "031ea86a",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "34b70ed9",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "3faa686c",
+      "needsInterop": false
+    },
+    "@tsparticles/angular": {
+      "src": "../../../../../../node_modules/@tsparticles/angular/fesm2022/tsparticles-angular.mjs",
+      "file": "@tsparticles_angular.js",
+      "fileHash": "d71f2ff9",
+      "needsInterop": false
+    },
+    "lottie-web": {
+      "src": "../../../../../../node_modules/lottie-web/build/player/lottie.js",
+      "file": "lottie-web.js",
+      "fileHash": "ed054363",
+      "needsInterop": true
+    },
+    "ngx-lottie": {
+      "src": "../../../../../../node_modules/ngx-lottie/fesm2022/ngx-lottie.mjs",
+      "file": "ngx-lottie.js",
+      "fileHash": "5cb7e91e",
+      "needsInterop": false
+    },
+    "typewriter-effect/dist/core": {
+      "src": "../../../../../../node_modules/typewriter-effect/dist/core.js",
+      "file": "typewriter-effect_dist_core.js",
+      "fileHash": "3617a11d",
+      "needsInterop": true
+    },
+    "zone.js": {
+      "src": "../../../../../../node_modules/zone.js/fesm2015/zone.js",
+      "file": "zone__js.js",
+      "fileHash": "18a30b20",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-BV7B5XFB": {
+      "file": "chunk-BV7B5XFB.js"
+    },
+    "chunk-OFXAYZGC": {
+      "file": "chunk-OFXAYZGC.js"
+    },
+    "chunk-VCTIDBYX": {
+      "file": "chunk-VCTIDBYX.js"
+    },
+    "chunk-KQSGOR2U": {
+      "file": "chunk-KQSGOR2U.js"
+    }
+  }
+}

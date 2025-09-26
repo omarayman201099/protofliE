@@ -1,0 +1,7 @@
+<div class="background">
+  <div
+    *ngFor="let bubble of bubbles; let i = index"
+    class="bubble"
+    [ngStyle]="{ transform: getTransform(i) }"
+  ></div>
+</div>

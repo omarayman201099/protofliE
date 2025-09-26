@@ -1,0 +1,83 @@
+<section
+  id="hero"
+  class="w-full min-h-screen flex flex-col-reverse md:flex-row justify-between items-center px-6 md:px-16 lg:px-24 gap-10 md:gap-20 overflow-hidden"
+>
+  <!-- النصوص -->
+  <div
+    class="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 opacity-0 animate-fade-in-up animate-delay-200"
+  >
+    <!-- العنوان -->
+    <h1
+      class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white"
+      style="text-shadow: 0 0 20px rgba(119, 66, 168, 0.6);"
+    >
+      Front-end
+      <span
+        class="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-400 bg-clip-text text-transparent"
+        style="text-shadow: 0 0 20px rgba(119, 66, 168, 0.6);"
+      >
+        Developer
+      </span>
+    </h1>
+
+    <!-- الكتابة -->
+    <h2
+      id="typewriter"
+      class="text-lg sm:text-xl md:text-2xl text-gray-300 opacity-0 animate-fade-in-up animate-delay-400"
+    ></h2>
+
+    <!-- الوصف -->
+    <p
+      class="text-gray-400 leading-relaxed text-sm sm:text-base opacity-0 animate-fade-in-up animate-delay-500"
+    >
+      Menciptakan Website Yang Inovatif, Fungsional, dan <br />
+      User-Friendly untuk Solusi Digital
+    </p>
+
+    <!-- Skills -->
+    <ul
+      class="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4 mt-4 opacity-0 animate-fade-in-up animate-delay-600"
+    >
+      <li class="about px-4 py-2 rounded">Angular</li>
+      <li class="about px-4 py-2 rounded">JavaScript</li>
+      <li class="about px-4 py-2 rounded">Tailwind</li>
+    </ul>
+
+    <!-- Buttons -->
+    <div
+      class="flex justify-center md:justify-start gap-4 sm:gap-6 mt-6 opacity-0 animate-fade-in-up animate-delay-700"
+    >
+      <button
+        class="px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-medium shadow-lg shadow-purple-800/40 hover:scale-105 transition"
+      >
+        <a href="#footer"> Contact Me <i class="fa-solid fa-inbox ml-2"></i></a>
+      </button>
+      <button
+        class="px-4 sm:px-6 py-2 sm:py-3 rounded-lg border border-purple-500 text-purple-400 font-medium hover:bg-purple-500/10 transition"
+      >
+      <a href="#projects">   View Projects</a>
+
+      </button>
+    </div>
+
+    <!-- Socials -->
+    <div
+      class="flex justify-center md:justify-start gap-6 sm:gap-10 mt-6 sm:mt-8 text-xl sm:text-2xl opacity-0 animate-fade-in-up animate-delay-800"
+    >
+        <a href="www.linkedin.com/in/omar-ayman-a11046384"><i class="fa-brands fa-linkedin soial-media cursor-pointer hover:text-purple-400 transition"></i></a>
+     <a href="https://www.instagram.com/omarayman8015?igsh=a3piZHh4Yml6MXZy"  target="_blank"> <i class="fa-brands fa-instagram soial-media cursor-pointer hover:text-pink-400 transition"></i></a>
+      <a href="https://github.com/omarayman201099"><i class="fa-brands fa-github soial-media cursor-pointer hover:text-yellow-400 transition"></i></a>
+    </div>
+  </div>
+
+  <!-- الصورة -->
+  <div
+    class="flex-1 flex justify-center md:justify-end opacity-0 animate-fade-in-up animate-delay-900"
+  >
+    <div
+      class="w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] lg:w-[400px] lg:h-[400px] transition-transform duration-700 ease-in-out hover:scale-110 hover:rotate-3 mt-10 md:mt-0"
+    >
+      <ng-lottie [options]="options"></ng-lottie>
+    </div>
+  </div>
+</section>
